@@ -1,11 +1,14 @@
 <template>
   <h1>{{ title }}</h1>
+  <Index />
 </template>
 
 <script>
+import Index from './components/Index.vue'
 
 export default {
   name: 'App',
+  components: { Index },
   data() {
     return {
       title: 'Hello World',
