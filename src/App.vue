@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h3 class="mb-5">{{ title }}</h3>
     <div class="mb-3">
       <label for="name" class="form-label">Name</label>
       <input type="text" class="form-control" ref="name" id="name">
@@ -7,6 +8,7 @@
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" ref="password" id="password">
+      <button @click="show">Click</button>
     </div>
     <button @click="login" class="btn btn-primary">Submit</button>
     <br class="mb-5">
@@ -24,7 +26,7 @@ export default {
   data() {
     return {
       title: 'Login',
-      name: 'Tuncay',
+      name: 'Fogo',
       password: '1234',
       isLogin: false,
     }
@@ -32,7 +34,11 @@ export default {
 
   methods: {
     login() {
-      return this.$refs.name.value === 'Tuncay' && this.$refs.password.value === '1234' ? this.isLogin = true : this.isLogin = false
+      return this.$refs.name.value === this.name && this.$refs.password.value === this.password ? this.isLogin = true : this.isLogin = false
+    },
+
+    show() {
+      return this.password.type = 'text'
     }
   },
 }
