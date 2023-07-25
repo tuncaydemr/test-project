@@ -8,7 +8,7 @@
     <div class="mb-3">
       <label for="password" class="form-label">Password</label>
       <input type="password" class="form-control" ref="password" id="password">
-      <button @click="show">Click</button>
+      <button class="btn btn-primary" @click="show">Show/Hide</button>
     </div>
     <button @click="login" class="btn btn-primary">Submit</button>
     <br class="mb-5">
