@@ -38,7 +38,8 @@ export default {
     },
 
     show() {
-      return this.password.type = 'text'
+      return this.$refs.password.type = 'text' = !this.$refs.password.type
+      // burdasın
     }
   },
 }
