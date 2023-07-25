@@ -39,7 +39,7 @@ export default {
 
     show() {
       return this.$refs.password.type = 'text'
-    }
+    },
   },
 }
 </script>
