@@ -38,7 +38,7 @@ export default {
     },
 
     show() {
-      return this.$refs.password.type = 'text'
+      return this.$refs.password.type = this.$refs.password.type === 'password' ? 'text' : 'password'
     },
   },
 }
